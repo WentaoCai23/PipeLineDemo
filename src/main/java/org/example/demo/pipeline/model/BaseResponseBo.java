@@ -1,0 +1,14 @@
+package org.example.demo.pipeline.model;
+
+import lombok.Data;
+
+/**
+ * @author cwt
+ * @description
+ * @date 2025/9/14
+ */
+@Data
+public class BaseResponseBo<T> {
+    private String uuid;
+    T data;
+}
