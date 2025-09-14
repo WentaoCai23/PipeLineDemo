@@ -50,7 +50,7 @@ src
 - [IPipeLine](file:///Users/caiwentao/IdeaProjects/PipeLineDemo/src/main/java/org/example/demo/pipeline/core/IPipeLine.java#L7-L9) 和 [DefaultPipeLine](file:///Users/caiwentao/IdeaProjects/PipeLineDemo/src/main/java/org/example/demo/pipeline/core/DefaultPipeLine.java#L15-L48)：定义和实现了流水线的基本操作，包括处理器的执行顺序和异常处理。
 - [IHandler](file:///Users/caiwentao/IdeaProjects/PipeLineDemo/src/main/java/org/example/demo/pipeline/handler/IHandler.java#L10-L15)：所有处理器需要实现的接口，定义了 [execute](file:///Users/caiwentao/IdeaProjects/PipeLineDemo/src/main/java/org/example/demo/pipeline/handler/IHandler.java#L14-L14) 方法。
 - [@PipeLineHandler](file:///Users/caiwentao/IdeaProjects/PipeLineDemo/src/main/java/org/example/demo/pipeline/handler/PipeLineHandler.java#L11-L20)：自定义注解，用于标识处理器及其所属的流水线。
-- [PipeLineInit](file:///Users/caiwentao/IdeaProjects/PipeLineDemo/src/main/java/org/example/demo/pipeline/core/PipeLineInit.java#L28-L83)：在应用启动时负责扫描和注册处理器，并动态创建流水线Bean。
+- [PipeLineInit](file:///Users/caiwentao/IdeaProjects/PipeLineDemo/src/main/java/org/example/demo/pipeline/core/PipeLineInit.java#L28-L83)：在应用启动时负责扫描和注册处理器，并动态创建流水线 Bean。
 - [WorkFlowContext](file:///Users/caiwentao/IdeaProjects/PipeLineDemo/src/main/java/org/example/demo/pipeline/model/WorkFlowContext.java#L12-L50)：用于在处理器之间传递数据和状态。
 - [WorkFlowStateEvent](file:///Users/caiwentao/IdeaProjects/PipeLineDemo/src/main/java/org/example/demo/pipeline/model/WorkFlowStateEvent.java#L9-L12) 和 [WorkStateEnum](file:///Users/caiwentao/IdeaProjects/PipeLineDemo/src/main/java/org/example/demo/pipeline/model/WorkStateEnum.java#L7-L11)：用于控制流水线的执行状态（如继续执行、退出等）。
 
