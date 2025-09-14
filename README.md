@@ -1,6 +1,6 @@
 # PipeLineDemo 项目说明
 
-这是一个基于Spring Boot的流水线（Pipeline）设计模式的项目脚手架，它提供了一个灵活、可扩展的处理流程框架。下面我将从项目结构、设计模式和适用场景三个方面进行详细介绍。
+这是一个基于 Spring Boot 的流水线（Pipeline）设计模式的项目脚手架，它提供了一个灵活、可扩展的处理流程框架。下面我将从项目结构、设计模式和适用场景三个方面进行详细介绍。
 
 ## 项目概述
 
@@ -31,7 +31,7 @@ src
 
 ### 1. Pipeline模式
 
-项目核心采用了Pipeline模式，通过 [IPipeLine](file:///Users/caiwentao/IdeaProjects/PipeLineDemo/src/main/java/org/example/demo/pipeline/core/IPipeLine.java#L7-L9) 接口和 [DefaultPipeLine](file:///Users/caiwentao/IdeaProjects/PipeLineDemo/src/main/java/org/example/demo/pipeline/core/DefaultPipeLine.java#L15-L48) 实现类来定义和执行处理流程。该模式将复杂的处理过程分解为一系列独立的处理步骤（Handler），每个步骤只关注自己的业务逻辑。
+项目核心采用了 Pipeline 模式，通过 [IPipeLine](file:///Users/caiwentao/IdeaProjects/PipeLineDemo/src/main/java/org/example/demo/pipeline/core/IPipeLine.java#L7-L9) 接口和 [DefaultPipeLine](file:///Users/caiwentao/IdeaProjects/PipeLineDemo/src/main/java/org/example/demo/pipeline/core/DefaultPipeLine.java#L15-L48) 实现类来定义和执行处理流程。该模式将复杂的处理过程分解为一系列独立的处理步骤（Handler），每个步骤只关注自己的业务逻辑。
 
 ### 2. 责任链模式
 
@@ -79,4 +79,4 @@ src
 - [HelloServiceImpl](file:///Users/caiwentao/IdeaProjects/PipeLineDemo/src/main/java/org/example/demo/hello/service/impl/HelloServiceImpl.java#L17-L29) 通过 [helloPipeLine](file:///Users/caiwentao/IdeaProjects/PipeLineDemo/src/main/java/org/example/demo/hello/service/impl/HelloServiceImpl.java#L21-L22) 处理请求。
 - [helloPipeLine](file:///Users/caiwentao/IdeaProjects/PipeLineDemo/src/main/java/org/example/demo/hello/service/impl/HelloServiceImpl.java#L21-L22) 会依次执行 [Hello01Handler](file:///Users/caiwentao/IdeaProjects/PipeLineDemo/src/main/java/org/example/demo/hello/handler/Hello01Handler.java#L18-L33) 和 [Hello02Handler](file:///Users/caiwentao/IdeaProjects/PipeLineDemo/src/main/java/org/example/demo/hello/handler/Hello02Handler.java#L18-L27)。
 - [Hello01Handler](file:///Users/caiwentao/IdeaProjects/PipeLineDemo/src/main/java/org/example/demo/hello/handler/Hello01Handler.java#L18-L33) 初始化响应数据，[Hello02Handler](file:///Users/caiwentao/IdeaProjects/PipeLineDemo/src/main/java/org/example/demo/hello/handler/Hello02Handler.java#L18-L27) 在此基础上追加信息。
-- 最终结果通过Controller返回给客户端。
+- 最终结果通过 Controller 返回给客户端。
